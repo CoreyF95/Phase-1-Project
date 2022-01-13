@@ -1,0 +1,214 @@
+{
+    "teams": [
+        {
+            "id": 1,
+            "name": "Hawks",
+            "city": "Atlanta",
+            "founded": 1949,
+            "championships": 1
+        },
+        {
+            "id": 2,
+            "name": "Celtics",
+            "city": "Boston",
+            "founded": 1946,
+            "championships": 17
+        },
+        {
+            "id": 3,
+            "name": "Nets",
+            "city": "Brooklyn",
+            "founded": 1976,
+            "championships": 0
+        },
+        {
+            "id": 4,
+            "name": "Hornets",
+            "city": "Charlotte",
+            "founded": 1988,
+            "championships": 0
+        },
+        {
+            "id": 5,
+            "name": "Bulls",
+            "city": "Chicago",
+            "founded": 1966,
+            "championships": 6
+        },
+        {
+            "id": 6,
+            "name": "Cavaliers",
+            "city": "Cleveland",
+            "founded": 1970,
+            "championships": 1
+        },
+        {
+            "id": 7,
+            "name": "Mavericks",
+            "city": "Dallas",
+            "founded": 1980,
+            "championships": 1
+        },
+        {
+            "id": 8,
+            "name": "Nuggets",
+            "city": "Denver",
+            "founded": 1976,
+            "championships": 0
+        },
+        {
+            "id": 9,
+            "name": "Pistons",
+            "city": "Detroit",
+            "founded": 1948,
+            "championships": 4
+        },
+        {
+            "id": 10,
+            "name": "Warriors",
+            "city": "Golden State",
+            "founded": 1946,
+            "championships": 6
+        },
+        {
+            "id": 11,
+            "name": "Rockets",
+            "city": "Houston",
+            "founded": 1967,
+            "championships": 2
+        },
+        {
+            "id": 12,
+            "name": "Pacers",
+            "city": "Indiana",
+            "founded": 1976,
+            "championships": 0
+        },
+        {
+            "id": 13,
+            "name": "Clippers",
+            "city": "Los Angeles",
+            "founded": 1970,
+            "championships": 0
+        },
+        {
+            "id": 14,
+            "name": "Lakers",
+            "city": "Los Angeles",
+            "founded": 1948,
+            "championships": 17
+        },
+        {
+            "id": 15,
+            "name": "Grizzlies",
+            "city": "Memphis",
+            "founded": 1995,
+            "championships": 0
+        },
+        {
+            "id": 16,
+            "name": "Heat",
+            "city": "Miami",
+            "founded": 1988,
+            "championships": 3
+        },
+        {
+            "id": 17,
+            "name": "Bucks",
+            "city": "Milwaukee",
+            "founded": 1968,
+            "championships": 2
+        },
+        {
+            "id": 18,
+            "name": "Timberwolves",
+            "city": "Minnesota",
+            "founded": 1989,
+            "championships": 0
+        },
+        {
+            "id": 19,
+            "name": "Pelicans",
+            "city": "New Orleans",
+            "founded": 2002,
+            "championships": 0
+        },
+        {
+            "id": 20,
+            "name": "Knicks",
+            "city": "New York",
+            "founded": 1946,
+            "championships": 2
+        },
+        {
+            "id": 21,
+            "name": "Thunder",
+            "city": "Oklahoma City",
+            "founded": 1967,
+            "championships": 1
+        },
+        {
+            "id": 22,
+            "name": "Magic",
+            "city": "Orlando",
+            "founded": 1989,
+            "championships": 0
+        },
+        {
+            "id": 23,
+            "name": "76ers",
+            "city": "Philadelphia",
+            "founded": 1949,
+            "championships": 3
+        },
+        {
+            "id": 24,
+            "name": "Suns",
+            "city": "Phoenix",
+            "founded": 1968,
+            "championships": 0
+        },
+        {
+            "id": 25,
+            "name": "Trailblazers",
+            "city": "Portland",
+            "founded": 1970,
+            "championships": 1
+        },
+        {
+            "id": 26,
+            "name": "Kings",
+            "city": "Sacramento",
+            "founded": 1948,
+            "championships": 1
+        },
+        {
+            "id": 27,
+            "name": "Spurs",
+            "city": "San Antonio",
+            "founded": 1976,
+            "championships": 5
+        },
+        {
+            "id": 28,
+            "name": "Raptors",
+            "city": "Los Angeles",
+            "founded": 1995,
+            "championships": 1
+        },
+        {
+            "id": 29,
+            "name": "Jazz",
+            "city": "Utah",
+            "founded": 1974,
+            "championships": 0
+        },
+        {
+            "id": 30,
+            "name": "Wizards",
+            "city": "Washington",
+            "founded": 1961,
+            "championships": 1
+        }
+    ]
+}
