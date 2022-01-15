@@ -1,3 +1,113 @@
-.image {
-    background-repeat: repeat; 
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  background: #131313;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  background-color: #ac0000;
+  background-image: linear-gradient(to top, #c00000, #ffffff, #0a008f);
+  background-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+#players {
+  background-color: #ffffff;
+  background-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+#logo {
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.brand-logo {
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style:none;
+  text-align: center;
+}
+
+.navbar-links {
+  color: #000;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+#home-page {
+  color: #000;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 42px;
+  padding: 5px 10px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.308);
+  color: #000
+}
