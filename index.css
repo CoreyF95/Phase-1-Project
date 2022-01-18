@@ -1,12 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
 .navbar {
-  background: #131313;
+  background-color: #000;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -18,8 +11,7 @@
 }
 
 .navbar-container {
-  background-color: #ac0000;
-  background-image: linear-gradient(to top, #c00000, #ffffff, #0a008f);
+  background-color: #000;
   background-size: 100%;
   display: flex;
   justify-content: space-between;
@@ -30,8 +22,9 @@
   margin: 0 auto;
   padding: 0 50px;
 }
-#players {
-  background-color: #ffffff;
+
+.container {
+  background-color: rgba(255, 255, 255, 0.329);
   background-size: 100%;
   display: flex;
   justify-content: space-between;
@@ -42,19 +35,17 @@
   padding: 0 50px;
 }
 
-#logo {
-  background-size: 100%;
-  display: flex;
+#teams {
+  display: flex; 
   align-items: center;
-  cursor:pointer;
-  text-decoration: none;
-  font-size: 2rem;
+  
 }
-.brand-logo {
-  background-size: 100%;
+
+#logo {
+  background-size: 1300px;
   display: flex;
   align-items: center;
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
 }
@@ -62,12 +53,12 @@
 .navbar-menu {
   display: flex;
   align-items: center;
-  list-style:none;
+  list-style: none;
   text-align: center;
 }
 
 .navbar-links {
-  color: #000;
+  color: #fff;
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -78,7 +69,7 @@
 }
 
 #home-page {
-  color: #000;
+  color: #fff;
   font-size: 32px;
   display: flex;
   align-items: center;
@@ -88,26 +79,22 @@
   height: 100%;
 }
 
-.navbar-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
+.navbar-links:hover {
+  color: #c00000f6;
+  transition: all 0.3s ease;
+}
+
+#logo {
+  padding-left: 25px;
+}
+
+.navbar-item {
   width: 100%;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 42px;
-  padding: 5px 10px;
-  height: 100%;
+.navbar-links {
+  text-align: center;
+  padding: 2rem;
   width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.308);
-  color: #000
+  display: table;
 }
