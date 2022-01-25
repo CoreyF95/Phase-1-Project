@@ -2,7 +2,7 @@ const players = document.getElementById("players");
 const teams = document.getElementById("teams")
 const playerList = document.getElementById("player-list")
 const teamList = document.getElementById("team-list")
-const vote = document.getElementsByClassName("vote-button")
+const vote = document.getElementsByTagName("button")
 
 
 
@@ -18,13 +18,11 @@ teams.addEventListener("click", () => {
         .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
 })
 
-function counter() {
-    let count = 0
-    return count++
-}
+
+
 
 function renderPlayer(player) {
-    console.log(player)
+    let counter = 0
     let newPlayer = document.createElement("li");
     newPlayer.className = "card";
     newPlayer.innerHTML = `
@@ -35,15 +33,13 @@ function renderPlayer(player) {
             <p />
             <p style="font-size: 28px">Position: ${player.position}</p>
             <span>  
-                <p style="font-size: 20px">Votes: ${counter()}<p/>
-                <button className="vote-button" style="font-size: 14px">Vote
-            <span/>
+                <p id=votes-${vote.length + 1} style="font-size: 20px">Votes: ${counter}<p/>
+                <button id=button-${vote.length + 1} style="font-size: 14px">Vote<span/>
     `
     playerList.appendChild(newPlayer);
 }
 
 function renderTeam(team) {
-    console.log(team)
     let newTeam = document.createElement("li");
     newTeam.className = "card";
     newTeam.innerHTML = `
