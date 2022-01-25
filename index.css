@@ -14,7 +14,6 @@
   background-color: #000;
   background-size: 100%;
   display: flex;
-  justify-content: space-between;
   height: 80px;
   z-index: 1;
   width: 100%;
@@ -24,25 +23,19 @@
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.329);
+  background-color: rgba(255, 255, 255, 0.103);
   background-size: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   z-index: 1;
-  width: 100%;
+  height: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 50px;
-}
-
-#teams {
-  display: flex; 
-  align-items: center;
-  
+  justify-content: space-evenly;
 }
 
 #logo {
-  background-size: 1300px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -79,11 +72,6 @@
   height: 100%;
 }
 
-.navbar-links:hover {
-  color: #c00000f6;
-  transition: all 0.3s ease;
-}
-
 #logo {
   padding-left: 25px;
 }
@@ -94,7 +82,29 @@
 
 .navbar-links {
   text-align: center;
-  padding: 2rem;
-  width: 100%;
+  width: 300px;
   display: table;
+}
+
+#players:hover {
+  color: #c00000f6;
+  transition: all 0.5s ease;
+}
+
+#teams:hover {
+  color:#1100ff;
+  transition: all 0.5s ease;
+}
+
+#vote:hover {
+  color:#ffd255;
+  transition: all 0.5s ease;
+}
+
+.players {
+  font-size: 32px;
+}
+
+.teams {
+  font-size: 32px;
 }
