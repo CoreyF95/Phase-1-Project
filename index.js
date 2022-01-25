@@ -7,12 +7,14 @@ const vote = document.getElementsByTagName("button")
 
 
 players.addEventListener("click", () => {
+    teamList.innerHTML = ``
     fetch("https://www.balldontlie.io/api/v1/players")
         .then((resp) => resp.json())
         .then((playerData) => playerData.data.forEach(player => renderPlayer(player)))
 })
 
 teams.addEventListener("click", () => {
+    playerList.innerHTML = ``
     fetch("https://www.balldontlie.io/api/v1/teams")
         .then((resp) => resp.json())
         .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
@@ -33,11 +35,19 @@ function renderPlayer(player) {
             <p />
             <p style="font-size: 28px">Position: ${player.position}</p>
             <span>  
-                <p id=votes-${vote.length + 1} style="font-size: 20px">Votes: ${counter}<p/>
-                <button id=button-${vote.length + 1} style="font-size: 14px">Vote<span/>
+                <p id=votes-${vote.length + 1} data-id=${vote.length + 1} style="font-size: 20px">Votes: ${counter}<p/>
+                <button id=voteButton-${vote.length + 1} style="font-size: 14px">Vote<span/>
     `
     playerList.appendChild(newPlayer);
 }
+
+document.addEventListener("click", (e) => {
+    if (e.target.id.split("-")[0] === "voteButton")
+        {console.log(e.target.id.split("-")[0])
+        e.target.previousSibling.parentNode.previousElementSibling.innerText = ""
+        console.log(e.target.previousElementSibling)
+    }
+})
 
 function renderTeam(team) {
     let newTeam = document.createElement("li");
