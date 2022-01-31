@@ -3,6 +3,7 @@ const teams = document.getElementById("teams")
 const playerList = document.getElementById("player-list")
 const teamList = document.getElementById("team-list")
 const vote = document.getElementsByTagName("button")
+let counter = 0;
 
 
 
@@ -20,11 +21,12 @@ teams.addEventListener("click", () => {
         .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
 })
 
-
+function reset() {
+    counter = 0;
+}
 
 
 function renderPlayer(player) {
-    let counter = 0
     let newPlayer = document.createElement("li");
     newPlayer.className = "card";
     newPlayer.innerHTML = `
@@ -35,17 +37,22 @@ function renderPlayer(player) {
             <p />
             <p style="font-size: 28px">Position: ${player.position}</p>
             <span>  
-                <p id=votes-${vote.length + 1} data-id=${vote.length + 1} style="font-size: 20px">Votes: ${counter}<p/>
+                <p id=votes-${vote.length + 1} data-id=${vote.length + 1} style="font-size: 20px">${counter}<p/>
                 <button id=voteButton-${vote.length + 1} style="font-size: 14px">Vote<span/>
     `
     playerList.appendChild(newPlayer);
 }
 
 document.addEventListener("click", (e) => {
-    if (e.target.id.split("-")[0] === "voteButton")
-        {console.log(e.target.id.split("-")[0])
-        e.target.previousSibling.parentNode.previousElementSibling.innerText = ""
-        console.log(e.target.previousElementSibling)
+    if (e.target.id.split("-")[0] === "voteButton") {
+        if (e.target.previousSibling.parentNode.previousElementSibling.innerText === "0") {
+            reset();
+            e.target.previousSibling.parentNode.previousElementSibling.innerText = counter + 1;
+        }
+        else {
+            counter++;
+            e.target.previousSibling.parentNode.previousElementSibling.innerText = (parseInt(e.target.previousSibling.parentNode.previousElementSibling.innerText) + 1)
+        }
     }
 })
 
