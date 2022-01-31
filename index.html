@@ -9,7 +9,7 @@
     <title>NBA Sample</title>
 </head>
 
-<body style="background-image: linear-gradient(to right, rgb(0, 0, 0),#c00000, rgb(0, 0, 0), #0a008f, rgb(0, 0, 0))">
+<body style="background-image: linear-gradient(to right, rgb(0, 0, 0),#dd0000, rgb(0, 0, 0), #0d00c2, rgb(0, 0, 0))">
     <nav class="navbar">
         <div class="navbar-container">
             <img id="logo" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png&w=288&h=288&transparent=true" href="/">
@@ -21,7 +21,7 @@
                 </li>
                 <li class="navbar-item">
                     <a class="navbar-links" id="vote">
-                        NBA All-Stars
+                        NBA MVP
                     </a>
                 </li>
                 <li class="navbar-item">
@@ -34,9 +34,10 @@
     </nav>
     <div class="container">
         <p class="playerList" style="font-size: 65px; color: rgb(200, 200, 200)">Players</p>
-        <ul id="player-list"></ul>
+        <p id="player-list" class="playerList"></p>
+        <button id="submit" class="playerList">Submit</button>
         <p class="teamList" style="font-size: 65px; color: rgb(200, 200, 200)">Teams</p>
-        <ul id="team-list"></ul>
+        <p id="team-list"></p>
     </div>
     <script src="/index.js"></script>
 </body>
