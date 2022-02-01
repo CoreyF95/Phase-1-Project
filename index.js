@@ -3,23 +3,50 @@ const teams = document.getElementById("teams")
 const playerList = document.getElementById("player-list")
 const teamList = document.getElementById("team-list")
 const vote = document.getElementsByTagName("button")
-const playerContainer = document.getElementsByClassName(playerList)
+const submit = document.getElementById("submit")
+const container = document.getElementById("container")
+const player_List = document.getElementsByClassName("playerList")
+const team_List = document.getElementsByClassName("teamList")
 let counter = 0;
 
 
 
+submit.addEventListener("click", () => {
+    playerList.innerHTML = ``;
+    teamList.innerHTML = ``;
+    if (container.children.length === 5) {
+        player_List.style.visibility = visible;
+        const mvp = document.createElement("p")
+        mvp.id = "mvp"
+        mvp.innerHTML = `
+            <div style="color: rgb(200, 200, 200);
+            width: 750px; align-items: center; padding-left: 475px;
+            padding-top: 50px; height: 150px; font-size: 80px;
+            color: black;">Hello<div/>
+        `
+        container.appendChild(mvp)
+    } else {
+        container.removeChild(mvp)
+    }
+})
+
 players.addEventListener("click", () => {
     teamList.innerHTML = ``;
-    fetch("https://www.balldontlie.io/api/v1/players")
-        .then((resp) => resp.json())
-        .then((playerData) => playerData.data.forEach(player => renderPlayer(player)))
+    if (container.children[2].children.length === 0) {
+        fetch("https://www.balldontlie.io/api/v1/players")
+            .then((resp) => resp.json())
+            .then((playerData) => playerData.data.forEach(player => renderPlayer(player)))
+    } else {container.children[2].innerHTML = ``}
 })
 
 teams.addEventListener("click", () => {
     playerList.innerHTML = ``;
-    fetch("https://www.balldontlie.io/api/v1/teams")
-        .then((resp) => resp.json())
-        .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
+    reset();
+    if (container.children[4].children.length === 0) {
+        fetch("https://www.balldontlie.io/api/v1/teams")
+            .then((resp) => resp.json())
+            .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
+    } else { container.children[4].innerHTML = `` }
 })
 
 function reset() {

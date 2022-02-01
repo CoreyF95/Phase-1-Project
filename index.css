@@ -121,7 +121,6 @@
   background-image: url(https://i.pinimg.com/originals/7e/8f/57/7e8f576ce15d1f066aef56550fb264f6.png);
   background-size: 100%;
   width: 1150px;
-
 }
 
 #team-list {
@@ -132,4 +131,17 @@
 
 .card {
   padding-left: 420px;
+}
+
+#mvp {
+  background-image: url(https://i.cdn.turner.com/nba/nba/heat/media/kia_mvp_logo.png);
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-color: rgba(200, 200, 200, 0.25);
+  width: 95%;
+  float: left;
+}
+
+.playerList {
+  visibility: visible;
 }
