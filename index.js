@@ -31,7 +31,7 @@ submit.addEventListener("click", () => {
         mvp.id = "mvp"
         mvp.innerHTML = `
         <div style="color: rgb(200, 200, 200);
-        width: 750px; align-items: center; padding-left: 375px;
+        width: 750px; align-items: center; float: right; padding-right: 200px;
         padding-top: 50px; height: 150px; font-size: 80px;
         color: black;">${arr[0].children[0].children[0].innerText}<div/>
         `
