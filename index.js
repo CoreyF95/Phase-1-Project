@@ -12,17 +12,28 @@ let counter = 0;
 
 
 submit.addEventListener("click", () => {
+    arr = [...playerList.children]
+    arr.sort((a, b) => {
+        const voteA = parseInt(a.children[0].children[6].innerText);
+        const voteB = parseInt(b.children[0].children[6].innerText);
+        if (voteA > voteB) {
+            return -1
+        } else {
+            return 1
+        }
+    })
+    debugger
+    playerList.children
     playerList.innerHTML = ``;
     teamList.innerHTML = ``;
     if (container.children.length === 5) {
-        player_List.style.visibility = visible;
         const mvp = document.createElement("p")
         mvp.id = "mvp"
         mvp.innerHTML = `
-            <div style="color: rgb(200, 200, 200);
-            width: 750px; align-items: center; padding-left: 475px;
-            padding-top: 50px; height: 150px; font-size: 80px;
-            color: black;">Hello<div/>
+        <div style="color: rgb(200, 200, 200);
+        width: 750px; align-items: center; padding-left: 375px;
+        padding-top: 50px; height: 150px; font-size: 80px;
+        color: black;">${arr[0].children[0].children[0].innerText}<div/>
         `
         container.appendChild(mvp)
     } else {
@@ -32,16 +43,16 @@ submit.addEventListener("click", () => {
 
 players.addEventListener("click", () => {
     teamList.innerHTML = ``;
+    reset();
     if (container.children[2].children.length === 0) {
         fetch("https://www.balldontlie.io/api/v1/players")
-            .then((resp) => resp.json())
-            .then((playerData) => playerData.data.forEach(player => renderPlayer(player)))
+        .then((resp) => resp.json())
+        .then((playerData) => playerData.data.forEach(player => renderPlayer(player)))
     } else {container.children[2].innerHTML = ``}
 })
 
 teams.addEventListener("click", () => {
     playerList.innerHTML = ``;
-    reset();
     if (container.children[4].children.length === 0) {
         fetch("https://www.balldontlie.io/api/v1/teams")
             .then((resp) => resp.json())
@@ -58,16 +69,16 @@ function renderPlayer(player) {
     let newPlayer = document.createElement("p");
     newPlayer.className = "card";
     newPlayer.innerHTML = `
-        <div style="background-color: rgb(255, 255, 255, 0.75); width: 300px; padding-left: 10px; border-top: 1px; padding-bottom: 1px">
-            <h4 style="font-size: 32px">${player.first_name + " " + player.last_name}</h4>
-            <p>
-                <span style="font-size: 28px">Team: ${player.team.full_name}</span>
-            <p/>
-            <p style="font-size: 30px">Position: ${player.position}</p>
-            <span>  
-                <p id=votes-${vote.length + 1} data-id=${vote.length + 1} style="font-size: 20px">${counter}<p/>
-                <button id=voteButton-${vote.length + 1} style="font-size: 14px">Vote<span/>
-        <div/>
+    <div style="background-color: rgb(255, 255, 255, 0.75); width: 300px; padding-left: 10px; border-top: 1px; padding-bottom: 1px">
+    <p style="font-size: 32px">${player.first_name + " " + player.last_name}</p>
+    <p>
+    <p style="font-size: 28px">Team: ${player.team.full_name}</p>
+    <p/>
+    <p style="font-size: 30px">Position: ${player.position}</p>
+    <p>  
+    <p id=votes-${vote.length + 1} data-id=${vote.length + 1} style="font-size: 20px">${counter}<p/>
+    <button id=voteButton-${vote.length + 1} style="font-size: 14px">Vote</>
+    <div/>
     `
     playerList.appendChild(newPlayer);
 }
