@@ -1,5 +1,5 @@
 # Phase-1-Project
-    With the NBA All-Star Weekend coming up in a couple weeks, I thought it would be fun to make a webpage dedicated to picking an
+With the NBA All-Star Weekend coming up in a couple weeks, I thought it would be fun to make a webpage dedicated to picking an
 MVP for the year. I pulled a list of 25 random players and all 30 teams off of a public API. The webpage is very simple. When you first open it, 
 you will see a "Players" tab and a "Teams" tab. The "Teams" tab pulls up basic information from each team, the team name, home city, conference and 
 the division. That teams tab has no functionality, it is there just to provide information for the teams. The "Players" tab, however, is where the 
