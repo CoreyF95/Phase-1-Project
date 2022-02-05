@@ -22,7 +22,6 @@ submit.addEventListener("click", () => {
             return 1
         }
     })
-    debugger
     playerList.children
     playerList.innerHTML = ``;
     teamList.innerHTML = ``;
