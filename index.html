@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>NBA Sample</title>
-</head>
+  </head>
 
-<body style="background-image: linear-gradient(to right, rgb(0, 0, 0),#dd0000, rgb(0, 0, 0), #0d00c2, rgb(0, 0, 0))">
+  <body
+    style="
+      background-image: linear-gradient(
+        to right,
+        rgb(0, 0, 0),
+        #dd0000,
+        rgb(0, 0, 0),
+        #0d00c2,
+        rgb(0, 0, 0)
+      );
+    "
+  >
     <nav class="navbar">
-        <div class="navbar-container">
-            <img id="logo" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png&w=288&h=288&transparent=true" href="/">
-            <ul class="navbar-menu">
-                <li class="navbar-item">
-                    <a class="navbar-links" id="players">
-                        Players
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-links" id="vote">
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a class="navbar-links" id="teams">
-                        Teams
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="navbar-container">
+        <img
+          id="logo"
+          src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png&w=288&h=288&transparent=true"
+          href="/"
+        />
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a class="navbar-links" id="players"> Players </a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-links" id="vote"> </a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-links" id="teams"> Teams </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div id="container" class="container">
-        <p class="playerList" style="font-size: 65px; color: rgb(200, 200, 200)">Players</p>
-        <button id="submit">Submit</button>
-        <p id="player-list"></p>
-        <p class="teamList" style="font-size: 65px; color: rgb(200, 200, 200)">Teams</p>
-        <p id="team-list"></p>
+      <p class="playerList" style="font-size: 65px; color: rgb(200, 200, 200)">
+        Players
+      </p>
+      <button id="submit">Submit</button>
+      <p id="player-list"></p>
+      <p class="teamList" style="font-size: 65px; color: rgb(200, 200, 200)">
+        Teams
+      </p>
+      <p id="team-list"></p>
     </div>
-    <script src="/index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

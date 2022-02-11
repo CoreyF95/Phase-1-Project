@@ -1,7 +1,14 @@
-# Phase-1-Project
-With the NBA All-Star Weekend coming up in a couple weeks, I thought it would be fun to make a webpage dedicated to picking an
-MVP for the year. I pulled a list of 25 random players and all 30 teams off of a public API. The webpage is very simple. When you first open it, 
-you will see a "Players" tab and a "Teams" tab. The "Teams" tab pulls up basic information from each team, the team name, home city, conference and 
-the division. That teams tab has no functionality, it is there just to provide information for the teams. The "Players" tab, however, is where the 
-functionality of the page comes in. Upon clicking the "Players" tab, you will see a list of 25 random players along with information on their
-team, what position they played, and how many votes they currently have. The vote button for each player, will increase their count by one. After all of the voting has been done, you can click the "Submit" button. The "Submit" button will close out the "Players" tab and open up a banner at the bottom of the screen displaying the winner of the voting. 
+# NBA MVP Vote
+
+A Single-Page Application with the purpose of selecting an NBA MVP.
+
+## Usage
+
+The "Teams" button at the top right of the page pulls up all 30 teams, and their city, division, and conference.
+
+The "Players" button at the top left of the page pulls up 25 NBA players, and their position, number of votes and a vote button.
+
+The vote button for each player adds 1 to that player's number of votes.
+
+The submit button at the top of the page displays an MVP banner for the player with the highest number of votes.
+>>>>>>> 030f2bb (Revised README)

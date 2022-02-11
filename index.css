@@ -91,12 +91,12 @@
 }
 
 #teams:hover {
-  color:#1100ff;
+  color: #1100ff;
   transition: all 0.5s ease;
 }
 
 #vote:hover {
-  color:#ffd255;
+  color: #ffd255;
   transition: all 0.5s ease;
 }
 
@@ -121,16 +121,24 @@
   background-image: url(https://i.pinimg.com/originals/7e/8f/57/7e8f576ce15d1f066aef56550fb264f6.png);
   background-size: 100%;
   width: 1150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #team-list {
   background-image: url(https://i.pinimg.com/originals/7e/8f/57/7e8f576ce15d1f066aef56550fb264f6.png);
   background-size: 100%;
   width: 1150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  padding-left: 420px;
+  padding-left: 10px;
 }
 
 #mvp {

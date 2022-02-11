@@ -7,6 +7,9 @@ const submit = document.getElementById("submit")
 const container = document.getElementById("container")
 const player_List = document.getElementsByClassName("playerList")
 const team_List = document.getElementsByClassName("teamList")
+
+
+
 let counter = 0;
 
 
@@ -50,20 +53,6 @@ players.addEventListener("click", () => {
     } else {container.children[2].innerHTML = ``}
 })
 
-teams.addEventListener("click", () => {
-    playerList.innerHTML = ``;
-    if (container.children[4].children.length === 0) {
-        fetch("https://www.balldontlie.io/api/v1/teams")
-            .then((resp) => resp.json())
-            .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
-    } else { container.children[4].innerHTML = `` }
-})
-
-function reset() {
-    counter = 0;
-}
-
-
 function renderPlayer(player) {
     let newPlayer = document.createElement("p");
     newPlayer.className = "card";
@@ -82,17 +71,13 @@ function renderPlayer(player) {
     playerList.appendChild(newPlayer);
 }
 
-document.addEventListener("click", (e) => {
-    if (e.target.id.split("-")[0] === "voteButton") {
-        if (e.target.previousSibling.parentNode.previousElementSibling.innerText === "0") {
-            reset();
-            e.target.previousSibling.parentNode.previousElementSibling.innerText = counter + 1;
-        }
-        else {
-            counter++;
-            e.target.previousSibling.parentNode.previousElementSibling.innerText = parseInt(e.target.previousSibling.parentNode.previousElementSibling.innerText) + 1;
-        }
-    }
+teams.addEventListener("click", () => {
+    playerList.innerHTML = ``;
+    if (container.children[4].children.length === 0) {
+        fetch("https://www.balldontlie.io/api/v1/teams")
+            .then((resp) => resp.json())
+            .then((teamData) => teamData.data.forEach(team => renderTeam(team)))
+    } else { container.children[4].innerHTML = `` }
 })
 
 function renderTeam(team) {
@@ -109,3 +94,21 @@ function renderTeam(team) {
     `
     teamList.appendChild(newTeam);
 }
+
+document.addEventListener("click", (e) => {
+    if (e.target.id.split("-")[0] === "voteButton") {
+        if (e.target.previousSibling.parentNode.previousElementSibling.innerText === "0") {
+            reset();
+            e.target.previousSibling.parentNode.previousElementSibling.innerText = counter + 1;
+        }
+        else {
+            counter++;
+            e.target.previousSibling.parentNode.previousElementSibling.innerText = parseInt(e.target.previousSibling.parentNode.previousElementSibling.innerText) + 1;
+        }
+    }
+})
+
+function reset() {
+    counter = 0;
+}
+
