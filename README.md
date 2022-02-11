@@ -11,4 +11,3 @@ The "Players" button at the top left of the page pulls up 25 NBA players, and th
 The vote button for each player adds 1 to that player's number of votes.
 
 The submit button at the top of the page displays an MVP banner for the player with the highest number of votes.
->>>>>>> 030f2bb (Revised README)
